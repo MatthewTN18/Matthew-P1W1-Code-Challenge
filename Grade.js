@@ -1,21 +1,27 @@
-// Prompting input of marks
-let marks = prompt("Enter student marks between 0 and 100");
+// The following function ensures the score only allows values between 0 and 1-00
 
-//Determining grade
-let grade ;
-if (marks > 79) {
-    grade = `A`;
+function limit(score) {
+    if (score >= 0 && score <= 100){
+        return grade(score)
+    }
+    else {return "Invalid Score"}
 }
-else if(marks >= 60 && marks <= 79) {
-    grade = `B`;
+// Function that returns apt grade according to score
+function grade(score){
+if (score > 79) {
+    return grade = `A`;
 }
-else if(marks >= 50 && marks <= 59) {
-    grade = `C`;
+else if(score >= 60 && score <= 79) {
+    return grade = `B`;
 }
-else if (marks = >= 40 && marks <= 49) {
-    grade = `D`;
+else if(score >= 50 && score <= 59) {
+    return grade = `C`;
 }
-else { grade = `E`; }
+else if (score >= 40 && score <= 49) {
+    return grade = `D`;
+}
+else { return grade = `E`; }
+}
 
-//Grade output
-console.log("Grade" , grade);
+// Here's an example of the program in action: Using score of 78
+console.log(grade(78));
